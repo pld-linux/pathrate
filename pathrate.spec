@@ -1,5 +1,5 @@
-#
 Summary:	Estimate network path capacity
+Summary(pl.UTF-8):	Szacowanie pojemności trasy sieciowej
 Name:		pathrate
 Version:	2.4.1
 Release:	1
@@ -14,6 +14,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Estimate network path capacity.
 
+%description -l pl.UTF-8
+Szacowanie pojemności trasy sieciowej.
+
 %prep
 %setup -q -n %{name}_%{version}
 
@@ -23,7 +26,6 @@ Estimate network path capacity.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 install %{name}_snd $RPM_BUILD_ROOT%{_bindir}
